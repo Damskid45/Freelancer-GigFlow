@@ -1,0 +1,9 @@
+export function validateServiceDraft(draft) { const errors = {}; if (draft.title.trim().length < 8)
+    errors.title = "Title should be at least 8 characters"; if (draft.summary.trim().length < 30)
+    errors.summary = "Summary should explain the outcome"; if (draft.description.trim().length < 120)
+    errors.description = "Description should contain at least 120 characters"; if (draft.price < 5)
+    errors.price = "Price must be at least ₦5"; if (!Number.isInteger(draft.days) || draft.days < 1 || draft.days > 90)
+    errors.days = "Delivery must be between 1 and 90 days"; if (!draft.category)
+    errors.category = "Choose a category"; if (draft.revisions < 0 || draft.revisions > 20)
+    errors.revisions = "Revisions must be between 0 and 20"; return errors; }
+export function estimateDelivery(days, submittedAt = Date.now()) { const deadline = new Date(submittedAt); deadline.setDate(deadline.getDate() + days); return deadline; }
