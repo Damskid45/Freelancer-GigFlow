@@ -1,0 +1,3 @@
+export function formatMoney(amount:number,currency="NGN"){return new Intl.NumberFormat("en-NG",{style:"currency",currency,maximumFractionDigits:0}).format(amount)}
+export function compactNumber(value:number){return new Intl.NumberFormat("en",{notation:"compact",maximumFractionDigits:1}).format(value)}
+export function relativeTime(iso:string){const delta=Date.now()-new Date(iso).getTime();const minute=60000,hour=minute*60,day=hour*24;if(delta<minute)return "just now";if(delta<hour)return `${Math.floor(delta/minute)}m ago`;if(delta<day)return `${Math.floor(delta/hour)}h ago`;return `${Math.floor(delta/day)}d ago`}
