@@ -1,0 +1,1 @@
+{"root":["./src/api-contracts.ts","./src/api.ts","./src/app.tsx","./src/data.ts","./src/format.ts","./src/forms.ts","./src/main.tsx","./src/pages/dashboard.tsx","./src/pages/gig.tsx","./src/pages/home.tsx","./src/pages/marketplace.tsx","./src/pages/orders.tsx"],"errors":true,"version":"5.8.3"}
